@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,10 +7,8 @@
   <script type="module" crossorigin src="/assets/index-h9l-r7zX.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-DkPoKaOZ.css">
 </head>
-
 <body>
   <div id="root"></div>
-
 <style>
 #minimax-floating-ball {
   position: fixed;
@@ -29,18 +26,15 @@
   overflow: hidden;
   cursor: pointer;
 }
-
 #minimax-floating-ball:hover {
   transform: translateY(-2px);
   background: #383838;
 }
-
 .minimax-ball-content {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-
 .minimax-logo-wave {
   width: 26px;
   height: 22px;
@@ -48,13 +42,11 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .minimax-ball-text {
   font-size: 12px;
   font-weight: 500;
   white-space: nowrap;
 }
-
 .minimax-close-icon {
   margin-left: 8px;
   font-size: 16px;
@@ -68,7 +60,6 @@
   opacity: 0.7;
   transition: opacity 0.2s ease;
 }
-
 .minimax-close-icon:hover {
   opacity: 1;
 }
@@ -89,7 +80,6 @@ function initFloatingBall() {
   // Initial animation
   ball.style.opacity = '0';
   ball.style.transform = 'translateY(20px)';
-
   setTimeout(() => {
     ball.style.opacity = '1';
     ball.style.transform = 'translateY(0)';
@@ -105,24 +95,19 @@ function initFloatingBall() {
       ball.style.transform = 'scale(1)';
     }, 100);
   });
-
   // Handle close button click
   const closeIcon = ball.querySelector('.minimax-close-icon');
   closeIcon.addEventListener('click', function (e) {
     e.stopPropagation();
     ball.style.opacity = '0';
     ball.style.transform = 'translateY(20px)';
-
     setTimeout(() => {
       ball.style.display = 'none';
     }, 300);
   });
 }
-
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', initFloatingBall); 
 </script>
-
 </body>
-
 </html>
